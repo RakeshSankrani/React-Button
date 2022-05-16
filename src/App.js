@@ -8,7 +8,12 @@ function App() {
   const [textarea, setTextarea] = useState(false)
   const [button, setButton] = useState(false)
   const [checkbox, setCheckbox] = useState(false)
-  const [state, setState] = useState([])
+  const [state, setState] = useState({
+  })
+  const [data, setData] = useState('')
+ 
+  
+
   
 
   const onTextboxClick = () => {
@@ -24,6 +29,7 @@ function App() {
     // setButton(false)
     // setCheckbox(false)
   }
+  
 
   const onButtonClick = () => {
     // setTextbox(false)
@@ -39,11 +45,15 @@ function App() {
     setCheckbox(true)
   }
 
-  const handleChange = (e) => {
-    console.log(e.target.value)
-    console.log(e.target.name)
-    
+
+
+  const handleChange = (e) =>{
+    setData(e.target.name)
+    console.log(data, e.target.value)
+
   }
+
+  
 
   return (
     <div className="container-fluid">
